@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusterum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <!-- HEADER OG NAVIGATION -->
+     <header class="header">
+        <div class="header-inhold">
+
+            <!-- PUSTERUM LOGO -->
+             <a href="index.html" class="header-logo">
+                <img src="Icons/Pusterum Logo Green.png" alt="Pusterum - Forside">
+             </a>
+
+             <!-- NAVIGATION -->
+              <nav class="header-navigation" aria-label="Hovednavigation">
+                <a href="index.html" aria-current="page">
+                    Forside
+                </a>
+                <a href="omstress.html">
+                    Om stress
+                </a>
+                <a href="kontakt.html">
+                    Kontakt
+                </a>
+              </nav>
+
+              <!-- SØGEFELT -->
+               <div class="header-søgning" role="search">
+                <label for="søgefelt" class="søge-label">
+                    Søg på hjemmesiden
+                </label>
+                <input type="search" id="søgefelt" name="søg" placeholder="Søg...">
+               </div>
+
+               <!-- PROFIL OG SPROG -->
+                <div class="header-ikoner">
+
+                    <!-- PROFIL IKON -->
+                     <span class="header-ikon">
+                        <img src="Icons/User Dark Green.svg" alt="Profil">
+                     </span>
+
+                     <!-- SPROG IKON -->
+                      <span class="header-ikon">
+                        <img src="Icons/Glove Dark Green.svg" alt="Vælg sprog">
+                      </span>
+                </div>
+        </div>
+     </header>
+
+    <main>
+        
+        <section class="hero">
+            <img src="Icons/Hero Forside.png" alt="Naturbillede" class="hero-billede">
+            <div class="hero-content">
+                <h1>Giv dig selv en pusterum</h1>
+                <p>Her finder du viden, inspiration og støtte til at forstå stress, skabe mere ro i hverdagen og passe bedre på din mentale sundhed.</p>
+                <div class="hero-buttons">
+                    <a href="omstress.html" class="btn btn-primary">
+                        Læs mere om stress 
+                        <img src="Icons/Arrow RIght Beige.svg" alt="" class="knap-pil">
+                    </a>
+                    <a href="#øvelser" class="btn btn-secondary">
+                        Find råd og øvelser
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- UDFORSK EMNER -->
+        <section class="emner" id="emner">
+            <h2>Udforsk Emner</h2>
+            <div class="emne-gitter">
+                
+                <!-- KORT 1: HVAD ER STRESS?-->
+                 <a href="omstress.html" class="emne-kort">
+                    <div class="emne-ikon" aria-hidden="true">
+                        <img src="Icons/Brain Dark Green.svg" alt="">
+                    </div>
+                    <h3>Hvad er stress?</h3>
+                    <p>Få en forståelse for, hvad stress er, og hvordan det kan påvirke dig.</p>
+                    <span class="kort-pil" aria-hidden="true">
+                        <img src="Icons/Arrow Right Dark Green.svg" alt="">
+                    </span>
+                 </a>
+
+                 <!-- KORT 2: RÅD OG ØVELSER -->
+                  <a href="#øvelser" class="emne-kort">
+                    <div class="emne-ikon" aria-hidden="true">
+                        <img src="Icons/Lily Dark Green.svg" alt="">
+                    </div>
+                    <h3>Råd og øvelser</h3>
+                    <p>Praktiske tips og øvelser, der kan hjælpe dig i hverdagen.</p>
+                    <span class="kort-pil" aria-hidden="true">
+                        <img src="Icons/Arrow Right Dark Green.svg" alt="">
+                    </span>
+                  </a>
+
+                  <!-- KORT 3: FÅ STØTTE -->
+                   <a href="#støtte" class="emne-kort">
+                    <div class="emne-ikon" aria-hidden="true">
+                        <img src="Icons/Group Dark Green.svg" alt="">
+                    </div>
+                    <h3>Få støtte</h3>
+                    <p>Her finder du steder, hvor du kan få hjælp og tale med nogen.</p>
+                    <span class="kort-pil" aria-hidden="true">
+                        <img src="Icons/Arrow Right Dark Green.svg" alt="">
+                    </span>
+                   </a>
+            </div>
+        </section>
+
+        <!-- KEND TEGNENE PÅ STRESS -->
+<section class="stress-tegn" id="stress-tegn">
+    <div class="stress-tegn-inhold">
+
+        <!-- BILLEDE TIL VENSTRE -->
+        <div class="stress-tegn-billede">
+            <img src="Icons/Hand-Macbook.png" alt="En person sidder med en kop ved en computer">
+        </div>
+
+        <!-- TEKST TIL HØJRE -->
+        <div class="stress-tegn-tekst">
+            <h2>Kend tegnene på stress</h2>
+            <p>Stress kan vise sig på mange forskellige måder, både fysisk, mentalt og i din hverdag. Lær at genkende signalerne, så du kan handle i tide.</p>
+            <a href="omstress.html" class="stress-tegn-knap">
+                Læs mere
+                <img src="Icons/Arrow RIght Beige.svg" alt="" class="stress-tegn-pil">
+            </a>
+        </div>
+
+    </div>
+</section>
+
+         <!-- PRØV EN KORT VEJRTRÆKNINGSØVELSE -->
+          <section class="vejrtrækning" id="øvelser">
+            <div class="vejrtrækning-ramme">
+                <h2>Prøv en kort vejrtrækningsøvelse</h2>
+                <div class="vejrtrækning-inhold">
+
+                    <!-- ØVELSENS TRE TRIN -->
+                     <div class="vejrtrækning-trin">
+
+                        <!-- TRIN 1 -->
+                         <div class="trin">
+                            <span class="trin-nummer">1</span>
+                            <h3>Træk vejret ind</h3>
+                            <p>( 4 sek. )</p>
+                         </div>
+
+                         <!-- PIL MELLEM TRIN 1 OG 2 -->
+                          <span class="trin-pil" aria-hidden="true">
+                            <img src="Icons/Arrow Right Dark Green.svg" alt="">
+                          </span>
+
+                          <!-- TRIN 2 -->
+                           <div class="trin">
+                            <span class="trin-nummer">2</span>
+                            <h3>Hold vejret</h3>
+                            <p>( 4 sek. )</p>
+                           </div>
+
+                           <!-- PIL MELLEM TRIN 2 OG 3 -->
+                            <span class="trin-pil" aria-hidden="true">
+                                <img src="Icons/Arrow Right Dark Green.svg" alt="">
+                            </span>
+
+                            <!-- TRIN 3 -->
+                             <div class="trin">
+                                <span class="trin-nummer">3</span>
+                                <h3>Pust ud</h3>
+                                <p>( 6 sek. )</p>
+                             </div>
+                     </div>
+
+                     <!-- NATURBILLEDE OG AFSPILNINGSKNAP -->
+                      <div class="vejrtrækning-afspiller">
+                        <img src="Icons/Boat-Swamp.png" alt="En båd i et roligt vådområde" class="vejrtrækning-billede">
+
+                        <!-- AFSPILNINGSKNAP -->
+                         <button type="button" class="afspil-knap" id="start-øvelse" aria-label="Start vejrtrækningsøvelsen">
+                            <img src="Icons/Play Green.svg" alt="">
+                         </button>
+
+                         <!-- STATUS FOR ØVELSEN -->
+                          <p id="øvelse-status" aria-live="polite"></p>
+                      </div>
+                </div>
+            </div>
+          </section>
+
+          <!-- FIND STØTTE OG HJÆLP -->
+           <section class="støtte-hjælp" id="støtte">
+            <h2>Find Støtte og Hjælp</h2>
+            <div class="støtte-gitter">
+
+                <!-- KORT 1: LIVSLINIEN -->
+                 <a href="https://www.livslinien.dk/" class="støtte-kort">
+                    <div class="støtte-ikon">
+                        <img src="Icons/Phone Dark Green.svg" alt="">
+                    </div>
+                    <div class="støtte-tekst">
+                        <h3>livslinien</h3>
+                        <p>Find telefonnummer og kontaktoplysninger.</p>
+                    </div>
+                 </a>
+
+                 <!-- KORT 2: HEADSPACE -->
+                  <a href="https://headspace.dk/" class="støtte-kort">
+                    <div class="støtte-ikon">
+                        <img src="Icons/Headspace Dark Green.svg" alt="">
+                    </div>
+                    <div class="støtte-tekst">
+                        <h3>Headspace</h3>
+                        <p>Læs om gratis rådgivning for unge.</p>
+                    </div>
+                  </a>
+
+                  <!-- KORT 3: ANDRE TILBUD -->
+                   <a href="kontakt.html" class="støtte-kort">
+                    <div class="støtte-ikon">
+                        <img src="Icons/Andre Tilbud Dark Green.svg" alt="">
+                    </div>
+                    <div class="støtte-tekst">
+                        <h3>Andre tilbud</h3>
+                        <p>Udforsk flere muligheder for støtte.</p>
+                    </div>
+                   </a>
+            </div>
+           </section>
+
+           <!-- DU ER IKKE ALENE -->
+            <section class="du-er-ikke-alene" id="du-er-ikke-alene">
+                <div class="du-er-ikke-alene-ramme">
+
+                    <!-- SKOVBILLEDE -->
+                     <img src="Icons/Forest Forside.png" alt="En rolig skov med høje træer" class="du-er-ikke-alene-billede">
+
+                     <!-- INHOLD OVEN PÅ BILLEDET -->
+                      <div class="du-er-ikke-alene-inhold">
+
+                        <!-- MISSION LOGO -->
+                         <img src="Icons/Mission Beige.svg" alt="" class="mission-ikon">
+
+                         <!-- OVERSKRIFT -->
+                          <h2>Du er ikke alene</h2>
+
+                          <!-- TEKST -->
+                           <p>Der er plads til både de svære dage og de små øjeblikke af ro.</p>
+                      </div>
+                </div>
+            </section>
+
+            <!-- OM PUSTERUM -->
+             <section class="om-pusterum" id="om-pusterum">
+                <div class="om-pusterum-ramme">
+
+                    <!-- BILLEDE -->
+                     <div class="om-pusterum-billede">
+                        <img src="Icons/Book-tree.png" alt="En person sidder under et træ og læser">
+                     </div>
+
+                     <!-- TEKST OG KNAP -->
+                      <div class="om-pusterum-inhold">
+                        <h2>Om Pusterum</h2>
+                        <p>Pusterum er en informationsplatform for unge mellem 18 og 25 år. Vi samler viden om stress, deler konkrete redskaber og viser veje til hjælp, så du kan finde mere balance og trivsel i hverdagen.</p>
+
+                        <!-- LÆS MERE KNAP -->
+                         <a href="omstress.html" class="knap knap-mørkegrøn">
+                            Læs mere om stress
+                            <img src="Icons/Arrow RIght Beige.svg" alt="" class="knap-pil">
+                         </a>
+                      </div>
+                </div>
+             </section>
+</main>
+             <!-- FOOTER -->
+              <footer class="footer">
+                <div class="footer-inhold">
+
+                    <!-- PUSTERUM LOGO OG SLOGAN -->
+                     <div class="footer-logo-område">
+                        <img src="Icons/Pusterum Logo Beige.svg" alt="Pusterum" class="footer-logo">
+                        <p class="footer-slogan">
+                            Giv dig selv et pusterum
+                        </p>
+                     </div>
+
+                     <!-- NAVIGATION -->
+                      <nav class="footer-navigation" aria-label="Footer navigation">
+                        <h3>Navigation</h3>
+                        <a href="index.html">Forside</a>
+                        <a href="omstress.html">Om stress</a>
+                        <a href="kontakt.html">Kontakt</a>
+                      </nav>
+
+                      <!-- FIND HJÆLP -->
+                       <div class="footer-hjælp">
+                        <h3>Find hjælp</h3>
+                        <a href="https://www.livslinien.dk/">
+                            Livslinien
+                        </a>
+                        <a href="https://headspace.dk/">
+                            Headspace
+                        </a>
+                        <a href="kontakt.html">
+                            Andre tilbud
+                        </a>
+                       </div>
+                </div>
+
+                <!-- COPYRIGHT -->
+                 <div class="footer-bund">
+                    <p>© 2026 Pusterum. Alle rettigheder forbeholdes.</p>
+                 </div>
+              </footer>
+</body>
+</html>
