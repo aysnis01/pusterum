@@ -1,0 +1,2882 @@
+/* PUSTERUM - GENEREL STYLING */
+
+/* FARVER OG SKRIFTTYPER */
+:root {
+    --mørkegrøn: #354C40;
+    --salviegrøn: #A7BFA5;
+    --lysegrøn: #DCE8DC;
+    --beige: #F5F1E8;
+}
+
+/* GRUNDLÆGGENDE STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--beige);
+    color: var(--mørkegrøn);
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.6;
+}
+
+/* OVERSKRIFTER */
+h1, h2, h2 {
+    font-weight: 600;
+}
+
+/* LINKS */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* BILLEDER */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TILGÆNGELIGHED */
+a:focus-visible,
+button:focus-visible
+input:focus-visible {
+    outline: 3px solid var(--mørkegrøn);
+    outline-offset: 4px;
+}
+
+/* HEADER OG NAVIGATION */
+.header {
+    width: 100%;
+    background-color: var(--beige);
+}
+
+.header-inhold {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20 px 40 px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* LOGO */
+.header-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* NAVIGATIONSLINKS */
+.header-navigation {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.header-navigation a {
+    font-family: "Quicksand" sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.header-navigation a:hover,
+.header-navigation a[aria-current="page"] {
+    background-color: var(--salviegrøn);
+}
+
+/* SØGEFELT */
+.header-søgning {
+    position: relative;
+    flex: 0 1 230px;
+}
+
+.søge-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.header-søgning input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 18px;
+    background-color: var(--lysegrøn);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 25px;
+    color: var(--mørkegrøn);
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+}
+
+.header-søgning input::placeholder {
+    color: var(--mørkegrøn);
+    opacity: 0.8;
+}
+
+/* PROFIL OG SPROGIKONER */
+.header-ikoner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-ikoner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-ikoner img {
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+}
+
+/* RESPONSIV NAVIGATION */
+@media (max-width: 950px) {
+    .header-inhold {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .header-navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .header-søgning {
+        flex-basis: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo img {
+        width: 145px;
+    }
+
+    .header-navigation a {
+        font-size: 15px;
+    }
+
+    .header-søgning {
+        flex-basis: 100%;
+    }
+}
+
+/* HERO SEKTION */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 650px;
+    margin: 0 auto;
+    padding: 80px 90px;
+    display: flex;
+    align-items: center;
+    background-color: var(--mørkegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* HERO BILLEDE */
+.hero-billede {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+}
+
+/* MØRKT OVERLAY PÅ. BILLEDET */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* HERO INDHOLD */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+/* HERO OVERSKRIFT */
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 96px;
+    font-weight: 600;
+    line-height: 1.05;
+    color: var(--beige);
+    margin-bottom: 28px;
+}
+
+/* HERO UNDEROVERSKRIFT */
+.hero p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--beige);
+    max-width: 680px;
+    margin-bottom: 35px;
+}
+
+/* HERO KNAPPER */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* FÆLLES KNAPSTYLING */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2 ease, transform 0.2 ease;
+}
+
+/* MØRKEGRØN KNAP */
+.btn-primary {
+    background-color: rgba(53, 76, 64, 0.9);
+    color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+}
+
+/* BEIGE KNAP */
+.btn-secondary {
+    background-color: rgba(245, 241, 232, 0.9);
+    color: 5px solid var(--mørkegrøn);
+}
+
+/* HOVER EFFEKT */
+.btn:hover {
+    transform: translate(-2px);
+}
+
+.btn-primary:hover {
+    background-color: var(--mørkegrøn);
+}
+
+.btn-secondary:hover {
+    background-color: var(--beige);
+}
+
+/* PIL I KNAPPER */
+.knap-pil {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* RESPONSIV HERO */
+@media (max-width: 950px) {
+    .hero {
+        min-height: 550px;
+        padding: 65px 45px;
+    }
+
+    .hero h1 {
+        font-size: 68px;
+    }
+
+    hero p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 520px;
+        padding: 55px 24px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* UDFORSK EMNER */
+.emner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background-color: var(--beige);
+}
+
+/* OVERSKRIFT */
+.emner h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* KORT LAYOUT */
+.emne-gitter,
+.emner-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* GRØNNE KORT */
+.emne-kort {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 250px;
+    padding: 30px 22px 40px;
+    background-color: var(--salviegrøn);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 15px;
+    color: var(--mørkegrøn);
+    text-align: center;
+    text-decoration: none;
+}
+
+/* IKONER */
+.emne-ikon {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+/* KORT OVERSKRIFTER */
+.emne-kort h3 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+/* BESKRIVELSER */
+.emne-kort p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--mørkegrøn);
+}
+
+/* PIL NEDERST TIL HØJRE */
+.kort-pil,
+.emne-pil {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* HOVER */
+.emne-kort:hover {
+    background-color: var(--lysegrøn);
+}
+
+/* RESPONSIV UDFORSK EMNER */
+@media (max-width: 950px) {
+    .emner {
+        padding: 50px 30px;
+    }
+
+    .emne-gitter,
+    .emner-container {
+        gap: 15px;
+    }
+
+    .emne-kort {
+        padding: 25px 15px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .emner {
+        padding: 45px 20px;
+    }
+
+    .emner h2 {
+        font-size: 28px;
+    }
+
+    .emne-gitter,
+    .emner-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .emne-kort {
+        min-height: 220px;
+    }
+}
+
+/* KEND TEGNENE PÅ STRESS */
+.stress-tegn {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+    box-sizing: border-box;
+}
+
+/* RAMME OG TO KOLONNER */
+.stress-tegn-inhold {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* BILLEDE TIL VENSTRE */
+.stress-tegn-billede {
+    width: 100%;
+    min-width: 0;
+}
+
+.stress-tegn-billede img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* TEKST TIL HØJRE */
+.stress-tegn-tekst {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 0;
+}
+
+/* OVERSKRIFT */
+.stress-tegn-tekst h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--mørkegrøn);
+    margin: 0 0 22px;
+}
+
+/* BRØDTEKST */
+.stress-tegn-tekst p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--mørkegrøn);
+    margin: 0 0 28px;
+}
+
+/* LÆS MERE KNAP */
+.stress-tegn-knap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 50px;
+    padding: 12px 25px;
+    background-color: var(--mørkegrøn);
+    color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* PIL I KNAPPEN */
+.stress-tegn-pil {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* KNAP VED HOVER */
+.stress-tegn-knap:hover {
+    background-color: #26382F;
+}
+
+/* TASTATURFOKUS */
+.stress-tegn-knap:focus-visible {
+    outline: 3px solid var(--mørkegrøn);
+    outline-offset: 4px;
+}
+
+/* RESPONSIV KEND TEGNENE PÅ STRESS */
+@media (max-width: 900px) {
+    .stress-tegn-inhold {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .stress-tegn-billede img {
+        height: 300px;
+    }
+
+    .stress-tegn-tekst h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stress-tegn {
+        padding: 20px;
+    }
+
+    .stress-tegn-inhold {
+        padding: 20px;
+    }
+
+    .stress-tegn-billede img {
+        height: 230px;
+    }
+
+    .stress-tegn-tekst h2 {
+        font-size: 30px;
+    }
+
+    .stress-tegn-tekst p {
+        font-size: 16px;
+    }
+
+    .stress-tegn-knap {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+}
+
+/* PRØV EN KORT VEJRTRÆKNINGSØVELSE */
+.vejrtrækning {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+    box-sizing: border-box;
+}
+
+/* RAMME OG KANT */
+.vejrtrækning-ramme {
+    width: 100%;
+    padding: 30px;
+    background-color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* OVERSKRIFT */
+.vejrtrækning-ramme h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--mørkegrøn);
+    margin: 0 0 25px;
+    text-align: left;
+}
+
+/* INHOLD OG LAYOUT */
+.vejrtrækning-inhold {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* DE TRE ØVELSESTRIN */
+.vejrtrækning-trin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+}
+
+/* HVERT ENKELT TRIN */
+.trin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+/* RUNDE NUMRE */
+.trin-nummer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: var(--salviegrøn);
+    color: var(--mørkegrøn);
+    font-family: "Quicksand", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* TRIN OVERSKRIFTER */
+.trin h3 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--mørkegrøn);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* TID UNDER HVERT TRIN */
+.trin p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--mørkegrøn);
+    text-align: center;
+}
+
+/* PILE MELLEM TRIN */
+.trin-pil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.trin-pil img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* NATURBILLEDE OG AFSPILLER */
+.vejrtrækning-afspiller {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* NATURBILLEDE */
+.vejrtrækning-billede {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* AFSPILNINGSKNAP */
+.afspil-knap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+
+    background-color: var(--beige);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* AFSPILNINGSIKON */
+.afspil-knap img {
+    display: block;
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* KNAP VED HOVER */
+.afspil-knap:hover {
+    background-color: var(--lysegrøn);
+}
+
+/* STATUS FOR ØVELSEN */
+#øvelse-status {
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--mørkegrøn);
+    text-align: center;
+}
+
+/* RESPONSIV VEJRTRÆKNINGØVELSE */
+@media (max-width: 900) {
+    .vejrtrækning-inhold {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .vejrtrækning-afspiller {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600) {
+    .vejrtrækning {
+        padding: 20px;
+    }
+
+    .vejrtrækning-ramme {
+        padding: 20px;
+    }
+
+    .vejrtrækning-ramme h2 {
+        font-size: 23px;
+    }
+
+    .vejrtrækning-trin {
+        gap: 6px;
+    }
+
+    .trin-nummer {
+        width: 48px;
+        height: 48px;
+        font-size: 26px;
+    }
+    
+    .trin h3 {
+        font-size: 14px;
+    }
+
+    .trin p {
+        font-size: 13px;
+    }
+
+    .trin-pil img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .vejrtrækning-billede {
+        height: 220px;
+    }
+
+    .afspil-knap {
+        width: 65px;
+        height: 65px;
+    }
+    .afspil-knap img {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* FIND STØTTE OF HJÆLP */
+
+.støtte-hjælp {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--beige);
+}
+
+/* OVERSKRIFT */
+.støtte-hjælp h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* KORTENES LAYOUT */
+.støtte-gitter,
+.kontaktoplysninger-gitter {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* HVERT KORT */
+.støtte-kort,
+.kontaktoplysninger-kort {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 150px;
+    padding: 25px;
+    background-color: var(--lysegrøn);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+    color: var(--mørkegrøn);
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+/* IKONER */
+.støtte-ikon,
+.kontaktoplysninger-ikon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.støtte-ikon img,
+.kontaktoplysninger-ikon img {
+    display: block;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* TEKSTOMRÅDE */
+.støtte-tekst {
+    flex: 1;
+    min-width: 0;
+}
+
+/* KORT OVERSKRIFTER */
+.støtte-tekst h3 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+    margin-bottom: 8px;
+}
+
+/* KORT BESKRIVELSER */
+.støtte-tekst p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--mørkegrøn);
+}
+
+/* HOVER */
+.støtte-kort:hover {
+    background-color: var(--salviegrøn);
+}
+
+/* RESPONSIV FIND STØTTE OF HJÆLP */
+@media (max-width: 950px) {
+    .støtte-gitter {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .støtte-kort {
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .støtte-hjælp {
+        padding: 25px 20px;
+    }
+
+    .støtte-hjælp h2 {
+        font-size: 25px;
+    }
+
+    .støtte-kort {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .støtte-ikon img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .støtte-tekst h3 {
+        font-size: 18px;
+    }
+
+    .støtte-tekst p {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .støtte-kort {
+        transition: none;
+    }
+}
+
+/* DU ER IKKE ALENE */
+.du-er-ikke-alene {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+}
+
+/* RAMME OG KANT */
+.du-er-ikke-alene-ramme {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    border: 2px solid var(--salviegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--mørkegrøn);
+}
+
+/* SKOVBILLEDE */
+.du-er-ikke-alene-billede {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INHOLD OVEN PÅ BILLEDET */
+.du-er-ikke-alene-inhold {
+    position: relative;
+    z-index: 1;
+    min-height: 420px;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(20, 35, 26, 0.30);
+}
+
+/* MISSION IKON */
+.mission-ikon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* OVERSKRIFT */
+.du-er-ikke-alene h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--beige);
+    margin-bottom: 18px;
+}
+
+/* UNDEROVERSKRIFT */
+.du-er-ikke-alene p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--beige);
+    max-width: 750px;
+}
+
+/* RESPONSIV DU ER IKKE ALENE */
+@media (max-width: 900px) {
+    .du-er-ikke-alene-ramme,
+    .du-er-ikke-alene-inhold {
+        min-height: 350px;
+    }
+
+    .du-er-ikke-alene h2 {
+        font-size: 52px;
+    }
+    .du-er-ikke-alene p {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 600px) {
+    .du-er-ikke-alene {
+        padding: 20px;
+    }
+
+    .du-er-ikke-alene-ramme,
+    .du-er-ikke-alene-inhold {
+        min-height: 300px;
+    }
+
+    .du-er-ikke-alene-inhold {
+        padding: 35px 20px;
+    }
+    
+    .mission-ikon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .du-er-ikke-alene h2 {
+        font-size: 42px;
+    }
+
+    .du-er-ikke-alene p {
+        font-size: 16px;
+    }
+}
+
+/* OM PUSTERUM */
+.om-pusterum {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+}
+
+/* RAMME OG LAYOUT */
+.om-pusterum-ramme {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 45px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--lysegrøn);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* BILLEDE */
+.om-pusterum-billede {
+    width: 100%;
+    min-width: 0;
+}
+
+.om-pusterum-billede img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* TEKST OG KNAP */
+.om-pusterum-inhold {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+/* OVERSKRIFT */
+.om-pusterum h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--mørkegrøn);
+    margin-bottom: 22px;
+}
+
+/* BRØDTEKST */
+.om-pusterum p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--mørkegrøn);
+    margin-bottom: 28px;
+}
+
+/* MØRKEGRØN KNAP */
+.om-pusterum .knap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 50px;
+    padding: 12px 25px;
+    background-color: var(--mørkegrøn);
+    color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* PIL I KNAPPEN */
+.om-pusterum .knap-pil {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* KNAP VED HOVER */
+.om-pusterum .knap:hover {
+    background-color: #26382f;
+}
+
+/* RESPONSIV OM PUSTERUM */
+@media (max-width: 900px) {
+    .om-pusterum-ramme {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .om-pusterum-billede img {
+        height: 300px;
+    }
+
+    .om-pusterum h2 {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    .om-pusterum {
+        padding: 20px;
+    }
+
+    .om-pusterum-ramme {
+        padding: 20px;
+    }
+    .om-pusterum-billede img {
+        height: 230px;
+    }
+    
+    .om-pusterum h2 {
+        font-size: 38px;
+    }
+
+    .om-pusterum p {
+        font-size: 16px;
+    }
+
+    .om-pusterum .knap {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background-color: var(--mørkegrøn);
+    color: var(--beige);
+    padding: 60px 40px 25px;
+}
+
+/* FOOTER LAYOUT */
+.footer-inhold {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+}
+
+/* LOGO OG SLOGAN */
+.footer-logo-område {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.footer-logo-område img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* SLOGAN */
+.footer-slogan {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--beige);
+}
+
+/* NAVIGATION OG HJÆLP */
+.footer-navigation,
+.footer-hjælp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* KOLONNEOVERSKRIFTER */
+.footer-navigation h3,
+.footer-hjælp h3 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--beige);
+    margin-bottom: 8px;
+}
+
+/* FOOTER LINKS */
+.footer-navigation a,
+.footer-hjælp a {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--beige);
+    text-decoration: none;
+}
+
+/* LINKS VED HOVER */
+.footer-navigation a:hover,
+.footer-hjaelp a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* TASTATURFOKUS */
+.footer a:focus-visible {
+    outline: 2px solid var(--beige);
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+/* NEDERSTE DEL */
+.footer-bund {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(245, 241, 232, 0.4);
+    text-align: center;
+}
+
+/* COPYRIGHT */
+.footer-bund p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--beige);
+}
+
+/* RESPONSIV FOOTER */
+@media (max-width: 900px) {
+    .footer-inhold {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-logo-område {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-inhold {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-logo-område {
+        grid-column: auto;
+    }
+
+    .footer-logo-område img {
+        width: 170px;
+    }
+
+    .footer-navigation h3,
+    .footer-hjælp h3 {
+        font-size: 18px;
+    }
+
+    .footer-navigation a,
+    .footer-hjælp a {
+        font-size: 15px;
+    }
+
+    .footer-bund p {
+        font-size: 12px;
+    }
+}
+
+/* OM STRESS HERO */
+.om-stress-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 480px;
+    margin: 0 auto;
+    background-color: var(--mørkegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* BAGGRUNDSBILLEDE */
+.om-stress-hero-billede {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEKST OVEN PÅ BILLEDET */
+.om-stress-hero-inhold {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 480px;
+    padding: 60px 30px;
+    background-color: rgba(20, 35, 26, 0.35);
+    text-align: center;
+}
+
+/* OVERSKRIFT */
+.om-stress-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--beige);
+    margin-bottom: 20px;
+}
+
+/* BESKRIVELSE */
+.om-stress-hero p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--beige);
+    max-width: 700px;
+}
+
+/* RESPONSIV HERO */
+@media (max-width: 900px) {
+    .om-stress-hero,
+    .om-stress-hero-inhold {
+        min-height: 400px;
+    }
+
+    .om-stress-hero h1 {
+        font-size: 52px;
+    }
+    
+    .om-stress-hero p {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 600px) {
+    .om-stress-hero,
+    .om-stress-hero-inhold {
+        min-height: 320px;
+    }
+
+    .om-stress-hero-inhold {
+        padding: 40px 20px;
+    }
+
+    .om-stress-hero h1 {
+        font-size: 40px;
+    }
+
+    .om-stress-hero p {
+        font-size: 16px;
+    }
+}
+
+/* HVAD ER STRESS? */
+.hvad-er-stress {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+}
+
+/* RAMME OG TO KOLONNER */
+.hvad-er-stress-inhold {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* TEKST TIL VENSTRE */
+.hvad-er-stress-tekst {
+    min-width: 0;
+}
+
+/* OVERSKRIFT */
+.hvad-er-stress-tekst h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--mørkegrøn);
+    margin-bottom: 20px;
+}
+
+/* BR0DTEKST */
+.hvad-er-stress-tekst p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--mørkegrøn);
+}
+
+/* BILLEDER TIL HØJRE */
+.hvad-er-stress-billede {
+    width: 100%;
+    min-width: 0;
+}
+
+.hvad-er-stress-billede img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* RESPONSIV HVAD ER STRESS? */
+@media (max-width: 900px) {
+    .hvad-er-stress-inhold {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hvad-er-stress-billede img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hvad-er-stress {
+        padding: 20px;
+    }
+    
+    .hvad-er-stress-inhold {
+        padding: 20px;
+    }
+
+    .hvad-er-stress-tekst h2 {
+        font-size: 28px;
+    }
+
+    .hvad-er-stress-inhold p {
+        font-size: 16px;
+    }
+
+    .hvad-er-stress-billede img {
+        height: 220px;
+    }
+}
+
+/* SYMPTOMER PÅ STRESS */
+.stress-symptomer {
+    width: 100%;
+    max-width: 1360px;
+    margin: 20px auto;
+    padding: 35px;
+    background-color: var(--salviegrøn);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* OVERSKRIFT */
+.stress-symptomer h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--mørkegrøn);
+    margin-bottom: 30px;
+}
+
+/* TRE KORT VED SIDEN AF HINANDEN */
+.symptomer-gitter {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+/* HVERT SYMPTOMKORT */
+.symptom-kort {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+    min-height: 210px;
+    padding: 25px 20px;
+    background-color: var(--beige);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* IKONER */
+.symptom-ikon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 15px;
+}
+
+.symptom-ikon img {
+    display: block;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* KORT OVERSKRIFTER */
+.symptom-kort h3 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--mørkegrøn);
+    margin-bottom: 10px;
+}
+
+/* KORT BESKRIVELSER */
+.symptom-kort p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--mørkegrøn);
+}
+
+/* RESPONSIVE SYMPTOMER PÅ STRESS */
+@media (max-width: 900px) {
+    .stress-symptomer {
+        width: calc(100% - 60px);
+        padding: 25px;
+    }
+
+    .symptomer-gitter {
+        gap: 15px;
+    }
+
+    .symptom-kort {
+        padding: 20px 12px;
+    }
+
+    .symptom-kort h3 {
+        font-size: 16px;
+    }
+    .symptom-kort p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stress-symptomer {
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+
+    .stress-symptomer h2 {
+        font-size: 26px;
+    }
+
+    .symptomer-gitter {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .symptom-kort {
+        min-height: 180px;
+    }
+
+    .symptom-kort h3 {
+        font-size: 18px;
+    }
+
+    .symptom-kort p {
+        font-size: 15px;
+    }
+}
+
+/* UDLØSE OG RÅD */
+.stress-råd {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+    box-sizing: border-box;
+}
+
+/* TO KOLONNER */
+.stress-råd-inhold {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* BEGGE PANELER */
+.stress-årsager,
+.stress-gode-råd {
+    position: relative;
+    min-width: 0;
+    min-height: 400px;
+    padding: 35px;
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* VENSTRE PANEL */
+.stress-årsager h2,
+.stress-gode-råd h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* VENSTRE PANEL TEKST */
+.stress-årsager h2,
+.stress-årsager li {
+    color: var(--mørkegrøn);
+}
+
+/* LISTER */
+.stress-årsager ul,
+.stress-gode-råd ul {
+    padding-left: 24px;
+}
+
+.stress-årsager li,
+.stress-gode-råd li {
+    font-family: "Quicksand", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* HØJRE PANEL */
+.stress-gode-råd {
+    background-color: var(--mørkegrøn);
+}
+
+/* BAGGRUNDSBILLEDE */
+.stress-råd-billede {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* MØRK OVERLÆGNING PÅ BILLIDET */
+.stress-gode-råd::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(20, 35, 26, 0.50);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* TEKST OVEN PÅ BILLEDET */
+.stress-gode-råd-inhold {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* TEKSTFARVE */
+.stress-gode-råd h2,
+.stress-gode-råd li {
+    color: var(--beige);
+}
+
+/* RESPONSIV UDLØSE OG RÅD */
+@media (max-width: 900px) {
+    .stress-råd-inhold {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .stress-årsager,
+    .stress-gode-råd {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stress-råd {
+        padding: 20px;
+    }
+
+    .stress-årsager,
+    .stress-gode-råd {
+        padding: 25px 20px;
+        min-height: 320px;
+    }
+
+    .stress-årsager h2,
+    .stress-gode-råd h2 {
+        font-size: 24px;
+    }
+
+    .stress-årsager li,
+    .stress-gode-råd li {
+        font-size: 15px;
+    }
+}
+
+/* STØTTE OG HJÆLP */
+.stress-hjælp {
+    position: relative;
+    width: calc(100% - 80px);
+    max-width: 1360px;
+    min-height: 420px;
+    margin: 20px auto 40px;
+    background-color: var(--mørkegrøn);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* BAGGRUNDSBILLEDE */
+.stress-hjælp-billede {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEKST OVEN PÅ BILLEDET */
+.stress-hjælp-inhold {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    min-height: 420px;
+    padding: 60px;
+    background-color: rgba(20, 35, 26, 0.45);
+}
+
+/* OVERSKRIFT */
+.stress-hjælp h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--beige);
+    margin-bottom: 20px;
+}
+
+/* BEKRIVELSE */
+.stress-hjælp p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--beige);
+    max-width: 650px;
+    margin-bottom: 28px;
+}
+
+/* KONTAKTKNAP */
+.stress-hjælp-knap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 12px 25px;
+    background-color: var(--mørkegrøn);
+    color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* BEIGE PIL I KNAPPEN */
+.stress-hjælp-pil {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* KNAP VED HOVER */
+.stress-hjælp-knap:hover {
+    background-color: #26382F;
+}
+/* TASTATURFOKUS */
+.stress-hjælp-knap:focus-visible {
+    outline: 3px solid var(--beige);
+    outline-offset: 4px;
+}
+
+/* RESPONSIV STØTTE OG HJÆLP */
+@media (max-width: 900px) {
+    .stress-hjælp {
+        min-height: 380px;
+    }
+
+    .stress-hjælp-inhold {
+        min-height: 380px;
+        padding: 40px;
+    }
+
+    .stress-hjælp h2 {
+        font-size: 32
+    }
+
+    .stress-hjælp p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stress-hjælp {
+        width: calc(100% - 40%);
+        min-height: 340px;
+        margin-bottom: 25px;
+    }
+
+    .stress-hjælp-inhold {
+        min-height: 340px;
+        padding: 30px 20px;
+    }
+
+    .stress-hjælp h2 {
+        font-size: 27px;
+    }
+
+    .stress-hjælp p {
+        font-size: 15px;
+    }
+
+    .stress-hjælp-knap {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+
+    .stress-hjælp-pil {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* HERO */
+.kontakt-hero {
+    position:relative;
+    width: calc(100% - 80px);
+    max-width: 1360px;
+    min-height: 480px;
+    margin: 20px auto;
+    background-color: var(--mørkegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* BAGGRUNDSBILLEDE */
+.kontakt-hero-billede {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEKST TIL VENSTRE */
+.kontakt-hero-inhold {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 480px;
+    padding: 60px;
+    background-color: rgba(20, 35, 26, 0.35);
+    text-align: left;
+}
+
+/* OVERSKRIFT */
+.kontakt-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--beige);
+    margin-bottom: 20px;
+}
+
+/* BESKRIVELSE */
+.kontakt-hero p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--beige);
+    max-width: 640px;
+    margin-bottom: 30px;
+}
+
+/* KNAPPER */
+.kontakt-hero-knapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.kontakt-knap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 12px 25px;
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* MØRKEGRØN KNAP */
+.kontakt-knap-grøn {
+    background-color: var(--mørkegrøn);
+    color: var(--beige);
+}
+
+/* BEIGE KNAP */
+.kontakt-knap-beige {
+    background-color: var(--beige);
+    color: var(--mørkegrøn);
+}
+
+/* MAIL IKON */
+.kontakt-knap-ikon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* TASTATURFOKUS */
+.kontakt-knap:focus-visible {
+    outline: 3px ssolid var(--beige);
+    outline-offset: 4px;
+}
+
+/* RESPONSIV KONTAKT HERO */
+@media (max-width: 900px) {
+    .kontakt-hero,
+    .kontakt-hero-inhold {
+        min-height: 400px;
+    }
+
+    .kontakt-hero-inhold {
+        padding: 40px;
+    }
+
+    .kontakt-hero h1 {
+        font-size: 56px;
+    }
+
+    .kontakt-hero p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .kontakt-hero {
+        width: calc(100% - 40px);
+    }
+
+    .kontakt-hero-inhold {
+        min-height: 350px;
+        padding: 30px 20px;
+    }
+
+    .kontakt-hero h1 {
+        font-size: 42px;
+    }
+
+    .kontakt-hero p {
+        font-size: 16px;
+    }
+
+    .kontakt-hero-knapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .kontakt-knap {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+/* KONTAKTOPLYSNINGER */
+.kontaktoplysninger {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+}
+
+.kontaktoplysninger-tekst {
+    flex: 1;
+    min-width: 0;
+}
+
+.kontaktoplysninger-tekst h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+    margin: 8px;
+}
+
+.kontaktoplysninger-tekst p,
+.kontaktoplysninger-tekst a {
+    font-family: "Quickksand", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--mørkegrøn);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .kontaktoplysninger {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    .kontaktoplysninger-gitter {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .kontaktoplysninger-kort {
+        width: 100%;
+        min-width: 0;
+        min-height: 110px;
+        padding: 20px;
+    }
+}
+
+/* TIDER OG FIND */
+.åbningstider-find-os {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+}
+
+/* TO KOLLNER */
+.åbningstider-find-os-inhold {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* BEGGE PANELER */
+.åbningstider,
+.find-os {
+    min-width: 0;
+    padding: 25px;
+    background-color: var(--salviegrøn);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+}
+
+/* OVERSKRIFTER MED IKON */
+.kontakt-sektion-overskrift {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.kontakt-sektion-ikon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.kontakt-sektion-overskrift h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+}
+
+/* ÅBNINGSTIDER */
+.åbningstider-liste {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HVER RÆKKE */
+.åbningstid-række {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--mørkegrøn);
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    color: var(--mørkegrøn);
+}
+
+.åbningstid-række:last-child {
+    border-bottom: none;
+}
+
+.åbningstid-række span:last-child {
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* FIND OS */
+.find-os-kort {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.find-os-kortbillede {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ADRESSE UNDER KORT */
+.find-os-adresse {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: var(--mørkegrøn);
+}
+
+.find-os-adresse-ikon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* SE PÅ KORT KNAP */
+.find-os-knap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: var(--mørkegrøn);
+    color: var(--beige);
+    border-radius: 8px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.find-os-pil {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* TASTATURFOKUS */
+.find-os-knap:focus-visible {
+    outline: 3px solid var(--mørkegrøn);
+    outline-offset: 4px;
+}
+
+/* RESPONSIV TIDER OG FIND */
+@media (max-width: 950px) {
+    .åbningstider-find-os-inhold {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .åbningstider-find-os {
+        padding: 20px;
+    }
+
+    .åbningstider,
+    .find-os {
+        padding: 20px;
+    }
+
+    .kontakt-sektion-overskrift h2 {
+        font-size: 21px;
+    }
+
+    .kontakt-sektion-ikon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .åbningstid-række {
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .find-os-kortbillede {
+        height: 190px;
+    }
+
+    .find-os-knap {
+        font-size: 13px;
+    }
+}
+
+/* RETTELSE FIND OS */
+.kontakt-sektion-overskrift p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--mørkegrøn);
+}
+
+/* PIN OVEN PÅ KORTET */
+.find-os-kortpin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* KNAP OVEN PÅ KORTET */
+.find-os-kort .find-os-knap {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    margin: 0;
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+/* SEND BESKED */
+.send-besked {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: var(--beige);
+}
+
+/* BILLEDE OG FORMULAR */
+.send-besked-inhold {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    align-items: stretch;
+    gap: 25px;
+}
+
+/* BILLEDE TIL VENSTRE */
+.send-besked-billede {
+    min-width: 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.send-besked-billede img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    object-fit: cover;
+}
+
+/* FORMULAR TIL HØJRE */
+.send-besked-formular {
+    min-width: 0;
+    padding: 30px;
+    background-color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 20px;
+}
+
+/* OVERSKRIFT */
+.send-besked-formular h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+    margin-bottom: 8px;
+}
+
+/* BESKRIVELSE */
+.send-besked-formular p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: var(--mørkegrøn);
+    margin-bottom: 20px;
+}
+
+/* FELTER */
+.besked-formular {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* HVERT FELT */
+.formular-felt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+/* EMNE OG BESKED FYLDER HELE BREDDEN */
+.formular-felt:nth-child(3),
+.formular-felt:nth-child(4) {
+    grid-column: 1 / -1;
+}
+
+/* LABELS */
+.formular-felt label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+}
+
+/* INPUT OG TEKSTFELT */
+.formular-felt input,
+.formular-felt textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #FFFFFF;
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 8px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    color: var(--mørkegrøn);
+}
+
+.formular-felt textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* TASTATURFOKUS */
+.formular-felt input:focus-visible,
+.formular-felt textarea:focus-visible {
+    outline: 3px solid var(--salviegrøn);
+    outline-offset: 2px;
+}
+
+/* SEND BESKED KNAP */
+.send-besked-knap {
+    grid-column: 1 / -1;
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 25px;
+    min-height: 48px;
+    background-color: var(--mørkegrøn);
+    color: var(--beige);
+    border: none;
+    border-radius: 8px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* MAIL IKON */
+.send-besked-ikon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* RESPONSIV SEND BESKED */
+@media (max-width: 900px) {
+    .send-besked-inhold {
+        grid-template-columns: 1fr;
+    }
+
+    .send-besked-billede img {
+        height: 280px;
+        min-height: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .send-besked {
+        padding: 20px;
+    }
+
+    .send-besked-formular {
+        padding: 20px;
+    }
+
+    .send-besked-formular h2 {
+        font-size: 24px;
+    }
+
+    .besked-formular {
+        grid-template-columns: 1fr;
+    }
+
+    .formular-felt,
+    .formular-felt:nth-child(3),
+    .formular-felt:nth-child(4) {
+        grid-column: 1;
+    }
+
+    .send-besked-knap {
+        grid-column: 1;
+    }
+}
+
+/* HOTLINES */
+.akut-hjælp {
+    position: relative;
+    width: calc(100% - 80px);
+    max-width: 1360px;
+    min-height: 400px;
+    margin: 20px auto;
+    background-color: var(--mørkegrøn);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* BAGGRUNDSBILLEDE */
+.akut-hjælp-billede {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TO KOLONNER */
+.akut-hjælp-inhold {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+    min-height: 400px;
+    padding: 45px;
+    background-color: rgba(20, 35, 26, 0.45);
+}
+
+/* TEKST TIL VENSTRE */
+.akut-hjælp-tekst {
+    min-width: 0;
+}
+
+/* OVERSKRIFT MED IKON */
+.akut-hjælp-overskrift {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.akut-hjælp-ikon {
+    display: block;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* OVERSKRIFT */
+.akut-hjælp h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--beige);
+}
+
+/* BESKRIVELSE */
+.akut-hjælp-beskrivelse {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--beige);
+    max-width: 450px;
+}
+
+/* TRE KORT STABLET LODRET */
+.akut-hjælp-gitter {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    min-width: 0;
+}
+
+/* HVERT HOTLINE KORT */
+.akut-hjælp-kort {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 5px;
+    padding: 18px 20px;
+    background-color: var(--beige);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 12px;
+}
+
+/* TELEFONIKON */
+.akut-kort-ikon {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* HOTLINE NAVN */
+.akut-hjælp-kort h3 {
+    grid-column: 2;
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+}
+
+/* TELEFONNUMMER ELLER BESKRIVELSE */
+.akut-hjælp-kort p {
+    grid-column: 2;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--mørkegrøn);
+}
+
+/* LINKS */
+.akut-hjælp-kort a {
+    grid-column: 2;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* TASTATURFOKUS */
+.akut-hjælp-kort a:focus-visible {
+    outline: 3px solid var(--mørkegrøn);
+    outline-offset: 4px;
+}
+
+/* RESPONSIV AKUT HJÆLP */
+@media (max-width: 900px) {
+    .akut-hjælp-inhold {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .akut-hjælp {
+        width: calc(100% - 40px);
+    }
+
+    .akut-hjælp-inhold {
+        padding: 25px 20px;
+    }
+
+    .akut-hjælp-overskrift {
+        gap: 10px;
+    }
+
+    .akut-hjælp-ikon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .akut-hjælp h2 {
+        font-size: 24px;
+    }
+
+    .akut-hjælp-beskrivelse {
+        font-size: 15px;
+    }
+
+    .akut-hjælp-kort {
+        grid-template-columns: 35px minmax(0, 1fr);
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .akut-kort-ikon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .akut-hjælp-kort h3 {
+        font-size: 16px;
+    }
+
+    .akut-hjælp-kort p {
+        font-size: 14px;
+    }
+
+    .akut-hjælp-kort a {
+        font-size: 13px;
+    }
+}
+
+/* ANDRE TILBUD */
+.andre-tilbud {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--beige);
+}
+
+/* OVERSKRIFT */
+.andre-tilbud h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* TRE KORT */
+.andre-tilbud-gitter {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* KORT DESIGN */
+.tilbud-kort {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding: 30px 22px;
+    background-color: var(--salviegrøn);
+    border: 2px solid var(--mørkegrøn);
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* IKONER */
+.tilbud-ikon img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+/* KORT OVERSKRIFTER */
+.tilbud-kort h3 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--mørkegrøn);
+    margin-bottom: 12px;
+}
+
+/* BESKRIVELSER */
+.tilbud-kort p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--mørkegrøn);
+}
+
+/* RESPONSIV ANDRE TILBUD */
+@media (max-width: 950px) {
+    .andre-tilbud-gitter {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .andre-tilbud {
+        padding: 25px 20px;
+    }
+
+    .andre-tilbud h2 {
+        font-size: 25px;
+    }
+
+    .tilbud-kort {
+        padding: 25px 20px;
+    }
+}
